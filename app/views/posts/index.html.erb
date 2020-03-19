@@ -1,1 +1,19 @@
-<h1>Socialite</h1>
+<div class = "container">
+    <% @posts.each do |post| %>
+        <div class = "row my-5">
+            <div class = "col-sm">
+                <div class = "mx-auto" style = "width: 640px;">
+                    <div class = "card">
+                        <div class = "card-body">
+                            Shiva Hegde
+                        </div>
+                        <%= image_tag post.image.variant(resize_to_fill: [640, 0]) %>
+                        <div class = "card-body">
+                            <%= post.caption %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    <% end %>    
+</div>
