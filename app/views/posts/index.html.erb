@@ -7,7 +7,7 @@
                         <div class = "card-body post-head name">
                             Shiva Hegde
                         </div>
-                        <%= image_tag post.image.variant(resize_to_fill: [640, 0]) %>
+                        <%= link_to (image_tag post.image.variant(resize_to_fill: [640, 0]), class: 'img-responsive'), post_path(post) %>
                         <div class = "card-body caption">
                             <%= post.caption %>
                         </div>
