@@ -13,6 +13,9 @@
                 <%= f.text_field :caption %>
                 <%= f.submit %>
             <% end %>
+            <%= link_to 'Delete Post', post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
+            |
+            <%= link_to 'Cancel', posts_path %>
         </div>
     </div>
 </div>
