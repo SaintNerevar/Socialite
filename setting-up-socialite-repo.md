@@ -14,7 +14,7 @@ After the installation completes, setup and migrate the database:
 
 ```bash
 rails db:create
-rails db:migrate
+rails db:setup
 ```
 
 {% hint style="danger" %}
