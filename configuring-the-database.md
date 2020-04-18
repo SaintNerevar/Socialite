@@ -69,6 +69,10 @@ postgres=# \q  #Exit
 1234 is the password for the `dev` branch
 {% endhint %}
 
+{% hint style="info" %}
+This method uses `trust` authentication
+{% endhint %}
+
 {% hint style="warning" %}
 Do not forget the `;` at the end!
 {% endhint %}

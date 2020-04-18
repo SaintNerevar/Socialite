@@ -10,10 +10,9 @@ cd Socialite
 bundle install
 ```
 
-After the installation completes, setup and migrate the database:
+After the installation completes, setup the database:
 
 ```bash
-rails db:create
 rails db:setup
 ```
 
