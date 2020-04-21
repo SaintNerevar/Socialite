@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: socialite_production
-  username: rails
+  username: socialite
   password: <%= ENV['SOCIALITE_DATABASE_PASSWORD'] %>
