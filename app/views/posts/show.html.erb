@@ -4,7 +4,7 @@
             <div class = "mx-auto" style = "width: 640px;">
                 <div class = "card">
                     <div class = "card-body post-head name">
-                        Shiva Hegde
+                        <%= @post.user.user_name %>
                     </div>
                     <%= image_tag @post.image.variant(resize_to_fill: [640, 0]) %>
                     <div class = "card-body caption">
