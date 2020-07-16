@@ -4,7 +4,7 @@
             <div class = "mx-auto" style = "width: 640px;">
                 <div class = "card">
                     <div class = "card-body post-head name">
-                        Shiva Hegde
+                        <%= @post.user.user_name %>
                     </div>
                     <%= image_tag @post.image.variant(resize_to_fill: [640, 0]) %>
                     <div class = "card-body caption">
@@ -12,9 +12,13 @@
                     </div>
                 </div>
                 <div class = "edit-links text-center">
-                    <%= link_to 'Edit Post', edit_post_path(@post) %>
-                    |
-                    <%= link_to 'Back', posts_path %>
+                    <% if @post.user.id == current_user.id %>
+                        <%= link_to 'Edit Post', edit_post_path(@post) %>
+                        |
+                        <%= link_to 'Back', posts_path %>
+                    <% else %>
+                        <%= link_to 'Back', posts_path %>
+                    <% end %>
             </div>
         </div>
     </div>    

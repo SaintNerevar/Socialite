@@ -8,11 +8,7 @@
     </div>
     <div class = "row justify-content-center">
         <div class = "col-sm-6 form-wrapper text-center">
-            <%= bootstrap_form_for @post do |f| %>
-                <%= f.file_field :image %>
-                <%= f.text_field :caption %>
-                <%= f.submit %>
-            <% end %>
+            <%= render 'form'%>
             <%= link_to 'Delete Post', post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
             |
             <%= link_to 'Cancel', posts_path %>
